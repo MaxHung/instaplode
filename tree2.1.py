@@ -22,7 +22,8 @@ def build_Tree(n):
 		for i in range(1,2**(n)):
 			l.append(i)
 		return l
-a=Tree(0)
-a.insert_l(1)
-print travel(a)
-print build_Tree(4)
+def find_number(t,x):
+	if x in travel(t):
+		return True
+	else:
+		return False
