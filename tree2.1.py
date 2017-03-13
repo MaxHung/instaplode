@@ -8,11 +8,10 @@ class Tree(object):
 	def insert_r(self,b):
 		self.r=Tree(b)
 def travel(t):
-	lst=[]
 	if t==None:
 		return []
 	else:
-		lst=lst+travel(t.l)+[t.val]+travel(t.r)
+		lst=travel(t.l)+[t.val]+travel(t.r)
 		return lst
 def build_Tree(n):
 	if n<=0 or type(n) != int:
@@ -25,5 +24,4 @@ def build_Tree(n):
 def find_number(t,x):
 	if x in travel(t):
 		return True
-	else:
-		return False
+	return False
