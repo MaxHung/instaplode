@@ -5,21 +5,21 @@ class Tree(object):
 		self.r=r
 	def insert(self,x):
 			if x< self.val:
-				if type(self.l) == int or self.l==None:
+				if type(self.l) == int or self.l == None:
 					self.l= Tree(x)
 				else:
 					self.l.insert(x)
 			else:
-				if type(self.r) == int or self.r==None:
+				if type(self.r) == int or self.r == None:
 					self.r=Tree(x)
 				else:
 					self.r.insert(x)
 	def travel(self):
-		if self.l==None:
+		if self.l == None:
 			left=[]
 		else:
 			left=self.l.travel()
-		if self.r==None:
+		if self.r == None:
 			right=[]
 		else:
 			right=self.r.travel()
