@@ -1,6 +1,5 @@
 def init(n):
-	lst=[0]*(2**n)
-	return lst
+	return [0]*(2**n)
 def modify_l(l,i,x):
 		l[i*2+1]=x
 def modify_r(l,i,x):
