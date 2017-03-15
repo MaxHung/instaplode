@@ -10,17 +10,11 @@ class Tree(object):
 def travel(t):
 	if t==None:
 		return []
-	else:
-		lst=travel(t.l)+[t.val]+travel(t.r)
-		return lst
+	return travel(t.l)+[t.val]+travel(t.r)
 def build_Tree(n):
 	if n<=0 or type(n) != int:
 		raise ValueError("Input should be whole number.")
-	else:
-		l=[]
-		for i in range(1,2**(n)):
-			l.append(i)
-		return l
+	return [0]*(2**n)
 def find_number(t,x):
 	if x in travel(t):
 		return True
