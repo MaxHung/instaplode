@@ -1,9 +1,9 @@
 class Tree(object):
 	def __init__(self, val ,l=None, r=None):
-		self.val=val
-		self.l=l
-		self.r=r
-	def insert(self ,x):
+		self.val = val
+		self.l = l
+		self.r = r
+	def insert(self, x):
 			if x < self.val:
 				if type(self.l) == int or self.l == None:
 					self.l = Tree(x)
@@ -18,12 +18,12 @@ class Tree(object):
 		if self.l == None:
 			left = []
 		else:
-			left=self.l.travel()
+			left = self.l.travel()
 		if self.r == None:
 			right = []
 		else:
-			right=self.r.travel()
-		lst=left+[self.val]+right
+			right = self.r.travel()
+		lst=left + [self.val] + right
 		return lst
 def sort_list(l):
 	t = Tree(l[0])
